@@ -1,0 +1,336 @@
+$lightGreen: #b9e7e7;
+
+.app {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1440px;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+    //LOGIN & REGISTER
+
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $lightGreen;
+
+      h1 {
+        font-size: 20px;
+        color: teal;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+
+        button {
+          padding: 10px;
+          border: none;
+          background-color: teal;
+          cursor: pointer;
+          color: white;
+        }
+
+        p {
+          font-size: 12px;
+          color: red;
+          text-align: center;
+        }
+
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+
+    //NAVBAR
+
+    .navbar {
+      .container {
+        padding: 5px 0px;
+        display: flex;
+        flex-direction: horizontal;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+          img {
+            width: 20px;
+          }
+        }
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          h6 {
+            font-size: 16px;
+            font-weight: 300;
+          }
+
+          span {
+            cursor: pointer;
+          }
+
+          .logout {
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid white;
+
+            &:hover {
+              color: teal;
+              background-color: $lightGreen;
+              border: 1px solid white;
+            }
+            // border: 1px solid white;
+            // background-color: white;
+            // &:hover{
+            //   background-color: $lightGreen;
+            //   width: 60px;
+            //   height: 60px;
+            //   border-radius: 50%;
+            //   display: flex;
+            //   align-items: center;
+            //   justify-content: center;
+            //   font-weight: 300;
+            //   border: 1px solid teal;
+            // }
+          }
+        }
+      }
+    }
+
+    //FOOTER
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: $lightGreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      img {
+        height: 25px;
+      }
+    }
+
+    // StudentDetails
+    .stud{
+      // position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      // margin: 10;
+      background: -webkit-linear-gradient(45deg, #b9e7e7, #5f2c82);
+      background: linear-gradient(45deg, #b9e7e7, #5f2c82);
+      font-weight: 100;
+      // height: 600px;
+      overflow-y: scroll;
+      // -webkit-transform: translate(0%, -10%);
+      // transform: translate(0%, -10%);
+      table {
+        // padding: 100px;
+        width: 600px;
+        height: 100px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      th {
+        text-align: left;
+      }
+      thead th {
+        background-color: #55608f;
+      }
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      tbody td {
+        position: relative;
+      }
+      tbody td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+      
+    }
+    $primary-color: #5c9c9c;
+    $secondary-color: #366464;
+    $font-family: Arial, sans-serif;
+    $input-border-radius: 5px;
+    $input-padding: 10px;
+    $input-font-size: 16px;
+    $button-bg-color: $primary-color;
+    $button-color: #fff;
+    $result-margin-top: 30px;
+    $result-text-align: center;
+    $result-p-font-size: 18px;
+    $result-p-font-weight: bold;
+    $result-p-color: $primary-color;
+    $result-h2-color: #879c9c;
+    $result-h2-font-size: 24px;
+    $result-h2-margin-top: 10px;
+    $result-h2-margin-bottom: 0;
+
+    .GraceMarkCalculator {
+      text-align: center;
+      font-family: $font-family;
+      margin-top: 30px;
+      margin-bottom: 60px;
+      h1 {
+        font-size: 32px;
+        color: $primary-color;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+          border: 1px solid #ccc;
+          border-radius: $input-border-radius;
+          padding: $input-padding;
+          margin-bottom: 20px;
+          font-size: $input-font-size;
+        }
+
+        button[type="submit"] {
+          background-color: $button-bg-color;
+          border: none;
+          border-radius: $input-border-radius;
+          color: $button-color;
+          cursor: pointer;
+          font-size: $input-font-size;
+          padding: $input-padding;
+        }
+      }
+
+      .result {
+        margin-top: $result-margin-top;
+        text-align: $result-text-align;
+
+        p {
+          font-size: $result-p-font-size;
+          font-weight: $result-p-font-weight;
+          color: $result-p-color;
+        }
+
+        h2 {
+          color: $result-h2-color;
+          font-size: $result-h2-font-size;
+          margin-top: $result-h2-margin-top;
+          margin-bottom: $result-h2-margin-bottom;
+        }
+      }
+    }
+    .chart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    // .grace-mark-calculator {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    
+    //   h1 {
+    //     font-size: 24px;
+    //     font-weight: bold;
+    //     margin-bottom: 20px;
+    //   }
+    
+    //   form {
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin-bottom: 20px;
+    
+    //     label {
+    //       font-weight: bold;
+    //       margin-bottom: 5px;
+    //     }
+    
+    //     input[type="number"] {
+    //       border: 1px solid #ccc;
+    //       border-radius: 5px;
+    //       padding: 10px;
+    //       margin-bottom: 10px;
+    //     }
+    
+    //     button[type="submit"] {
+    //       background-color: #400202;
+    //       border: none;
+    //       border-radius: 5px;
+    //       color: #fff;
+    //       cursor: pointer;
+    //       font-size: 16px;
+    //       padding: 10px;
+    //     }
+    //   }
+    
+    //   .result {
+    //     text-align: center;
+    
+    //     p {
+    //       font-size: 18px;
+    //       font-weight: bold;
+    //       color: #400202;
+    //     }
+    
+    //     h2 {
+    //       color: #b6b3b3;
+    //       font-size: 24px;
+    //       margin-top: 10px;
+    //       margin-bottom: 0;
+    //     }
+    //   }
+    // }
+    
+  }
+}
